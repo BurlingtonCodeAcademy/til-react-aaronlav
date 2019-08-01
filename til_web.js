@@ -41,4 +41,14 @@ async function addFact(request, response) {
     .send(JSON.stringify(output))
 }
 
+app.delete('delete fact', deleteFact)
+async () => {
+  const result = await App.deleteFact(request.body.text.delete())
+  expect(result).toBe(1);
+
+  await App.deleteOne({id: result.id})
+  const newResult = await App.deleteFact();
+  expect(fact).toBe(0);
+}
+
 app.listen(port, () => console.log(`TIL web app listening on port ${port}!`))

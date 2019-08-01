@@ -28,12 +28,14 @@
     "mime-types": "^2.1.18",
     "moment": "^2.22.2",
     "mongodb": "^3.1.1",
+    "mongoose": "^5.6.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "jasmine-node": "^1.15.0"
+    "jasmine-node": "^1.15.0",
+    "jest": "^24.8.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,5 +51,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "main": "til.js",
+  "directories": {
+    "lib": "lib"
   }
 }
