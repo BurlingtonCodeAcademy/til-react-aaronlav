@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TIL Entries</title>
+</head>
+<body>
+  <div id="factList">
+  </div>
+  <script>
+  fetch('/facts')
+  .then(response => {
+    return response.json()
+  })
+  .then(data => {
+    console.log(data)
+    let list = document.getElementById('factList')
+    data.forEach(fact => {
+      list.innerHTML += `<h2> ${fact.text} <h2> <a href="/${fact._id}">click here</a>`
+    })
+  })
+  </script>
+</body>
+</html>
+

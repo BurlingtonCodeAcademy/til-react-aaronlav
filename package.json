@@ -1,13 +1,13 @@
 {
   "name": "til",
   "version": "1.0.0",
-  "description": "Today I Learned tool using React as a front-end",
+  "description": "Today I Learned tool",
+  "bin": {
+    "til": "til.js"
+  },
   "scripts": {
-    "server": "node til_web.js",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "node til_web.js",
+    "test": "npx jasmine-node --verbose spec/*.spec.js"
   },
   "repository": {
     "type": "git",
@@ -27,33 +27,9 @@
     "mime": "^2.3.1",
     "mime-types": "^2.1.18",
     "moment": "^2.22.2",
-    "mongodb": "^3.1.1",
-    "mongoose": "^5.6.7",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "mongodb": "^3.1.1"
   },
   "devDependencies": {
-    "jasmine-node": "^1.15.0",
-    "jest": "^24.8.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "main": "til.js",
-  "directories": {
-    "lib": "lib"
+    "jasmine-node": "^1.15.0"
   }
 }
